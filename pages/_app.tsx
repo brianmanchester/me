@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 // Internal
 import theme from '../styles/theme';
+import Layout from '../components/Layout';
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
