@@ -16,7 +16,7 @@ export default function InternalButtonLink({ href, as, text, variant, size }: In
   return (
     <Link href={href} as={as}>
       <Button
-        component='a'
+        href={href}
         variant={variant}
         size={size}
       >
