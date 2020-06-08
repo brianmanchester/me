@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function Home() {
+export default function About() {
   const classes = useStyles();
 
   return (
