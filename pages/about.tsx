@@ -33,8 +33,9 @@ export default function About() {
         <Typography className={classes.text} variant='h4' component='h1' align='center'>About</Typography>
       </Hidden>
       <Typography className={classes.text} variant='body1' paragraph>
-        After years in the humanities, in the beginning of 2017 I attended a full stack JavaScript coding boot camp.
-        It was love at first sight. I was immediately floored by the practice of programming.
+        In early 2017, after years in the humanities, I attended a full stack JavaScript coding boot camp.
+        It was love at first sight.
+        I was immediately intrigued the practice of programming.
         I could engage in complex, logical thinking as well as beautiful, creative expression.
         Through the boot camp, I learned a ton and created some great projects.
       </Typography>
@@ -45,7 +46,7 @@ export default function About() {
       </Typography>
       <Typography className={classes.text} variant='body1' paragraph>
         When I'm not coding, I enjoy hanging out with my awesome partner, Kat, and our dog, Jax.
-        My favorite thing to do is to play basketball, but I also like jogging and CrossFit.
+        My favorite thing to do is to play basketball, but I also like jogging and other forms of exercise.
         When relaxing, I like a good show, movie, or book.
       </Typography>
     </Container>
