@@ -87,7 +87,7 @@ export default function Home() {
       </Grid>
       <div className={classes.border} />
       <Typography className={classes.skills} variant='subtitle1' component='h4'>Languages: JavaScript (es6+), TypeScript, Go</Typography>
-      <Typography className={classes.skills} variant='subtitle1' component='h4'>Technologies: Node.js, Express, Postgres, MySQL, GraphQL, Apollo, React, Redux, Next.js, Angular, Material-UI</Typography>
+      <Typography className={classes.skills} variant='subtitle1' component='h4'>Technologies: Node.js, Express, Postgres, MySQL, GraphQL, Apollo, React, Redux, Next.js, Angular, Material-UI, Tailwind CSS</Typography>
       <Grid className={classes.workContainer} container alignItems='center'>
         <Grid className={classes.iconContainer} item>
           <ProjectIcon className={classes.projectIcon} color='primary' />

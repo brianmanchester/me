@@ -113,7 +113,7 @@ export default function Layout({ children }: WithChildren) {
               <Avatar className={classes.logo} alt='Bmanch' src='/logo.png' />
             </IconButton>
           </Link>
-          <Typography variant='subtitle1' className={classes.title}>Work, projects, ideas</Typography>
+          <Typography variant='subtitle1' className={classes.title}>Work & Projects</Typography>
           <Hidden smDown>
             <InternalButtonLink
               cls={pathname === Routes.HOME ? classes.buttonOnPage : classes.buttonOffPage}

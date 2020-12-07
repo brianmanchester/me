@@ -72,10 +72,10 @@ export default function Contact() {
         <IconButton href='https://www.linkedin.com/in/brian-l-manchester/' target='_blank'>
           <LinkedInIcon className={classes.linkedInIcon} />
         </IconButton>
-        <IconButton href='https://twitter.com/bmanch7' target='_blank'>
+        <IconButton href='https://twitter.com/BrianManch' target='_blank'>
           <TwitterIcon className={classes.twitterIcon} />
         </IconButton>
-        <IconButton href='https://github.com/bmanch' target='_blank'>
+        <IconButton href='https://github.com/brianmanchester' target='_blank'>
           <GitHubIcon className={classes.gitHubIcon} />
         </IconButton>
       </Grid>
