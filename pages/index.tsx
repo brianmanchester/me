@@ -116,7 +116,7 @@ export default function Home() {
       </List>
       <Divider />
       <List>
-        <ListItem button component='a' href='https://bmanch.github.io/aardy-look/' target='_blank'>
+        <ListItem button component='a' href='https://brianmanchester.github.io/aardy-look/' target='_blank'>
           <ListItemText primary="Aardvark" secondary='Going to college? Make an informed decision about where to go and what to study with this debt analysis tool.' />
           <ListItemSecondaryAction classes={{ root: classes.secondaryAction }}>
             <OpenInNewIcon />

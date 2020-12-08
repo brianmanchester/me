@@ -110,7 +110,7 @@ export default function Layout({ children }: WithChildren) {
           </Hidden>
           <Link href={Routes.HOME}>
             <IconButton className={classes.logoButton} href={Routes.HOME} disableRipple>
-              <Avatar className={classes.logo} alt='Bmanch' src='/logo.png' />
+              <Avatar className={classes.logo} alt='Brian Manchester' src='/logo.png' />
             </IconButton>
           </Link>
           <Typography variant='subtitle1' className={classes.title}>Work & Projects</Typography>
