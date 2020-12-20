@@ -90,7 +90,7 @@ function writePolicies(directives: Directives): string {
 function getHash(scriptSrc: string): string {
   const hash = crypto.createHash('sha256');
   hash.update(scriptSrc);
-  return `'sha256-${hash.digest('base64')}`;
+  return `'sha256-${hash.digest('base64')}'`;
 }
 
 export enum Rule {
