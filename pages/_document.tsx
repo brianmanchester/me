@@ -12,9 +12,6 @@ import { getDirectives } from '../config/csp';
 import NextCSP from '../config/NextCSP';
 import CssInJsCsp from '../config/CssInJsCsp';
 
-// function getNonce(): string {
-//   return Buffer.from(uuidv4()).toString('base64');
-// }
 const isProd = process.env.NODE_ENV === 'production';
 const nonce = isProd ? Buffer.from(uuidv4()).toString('base64') : '';
 export default class AppDocument extends Document {
