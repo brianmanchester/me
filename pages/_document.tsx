@@ -30,6 +30,11 @@ export default class AppDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"
           />
+          <style
+            id='jss-server-side'
+            nonce={nonce}
+            dangerouslySetInnerHTML={{ __html: new ServerStyleSheets().toString() }}
+          />
         </Head>
         <body>
           <Main />
