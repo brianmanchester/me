@@ -8,11 +8,11 @@ interface CssInJsScpProps {
 const CssInJsCsp: FC<CssInJsScpProps> = ({ nonce }) => (
   <>
     <meta property="csp-nonce" content={nonce} />
-    <style
+    {/* <style
       id='jss-server-side'
       nonce={nonce}
       dangerouslySetInnerHTML={{ __html: new ServerStyleSheets().toString() }}
-    />
+    /> */}
   </>
 );
 
