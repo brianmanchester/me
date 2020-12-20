@@ -26,7 +26,7 @@ export default class AppDocument extends Document {
             documentProps={this.props}
             directives={getDirectives(process.env.NODE_ENV === 'production', nonce)}
           />
-          <CssInJsCsp nonce={nonce} />
+          {isProd && <CssInJsCsp nonce={nonce} />}
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
