@@ -35,7 +35,6 @@ export default class AppDocument extends Document {
           <Main />
           <NextScript />
         </body>
-        <style />
       </Html>
     );
   }
