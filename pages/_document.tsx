@@ -4,12 +4,20 @@ import { ServerStyleSheets } from '@material-ui/core/styles';
 
 // Internal
 import theme from '../styles/theme';
+import { getDirectives } from '../config/csp';
+
+// Internal view
+import NextCSP from '../config/NextCSP';
 
 export default class AppDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
+          <NextCSP
+            documentProps={this.props}
+            directives={getDirectives(process.env.NODE_ENV === 'production')}
+          />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
