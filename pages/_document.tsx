@@ -1,4 +1,6 @@
 import React from 'react';
+import { Buffer } from 'buffer';
+import { v4 as uuidv4 } from 'uuid';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 
@@ -8,7 +10,13 @@ import { getDirectives } from '../config/csp';
 
 // Internal view
 import NextCSP from '../config/NextCSP';
+import CssInJsCsp from '../config/CssInJsCsp';
 
+// function getNonce(): string {
+//   return Buffer.from(uuidv4()).toString('base64');
+// }
+const isProd = process.env.NODE_ENV === 'production';
+const nonce = isProd ? Buffer.from(uuidv4()).toString('base64') : '';
 export default class AppDocument extends Document {
   render() {
     return (
@@ -16,8 +24,9 @@ export default class AppDocument extends Document {
         <Head>
           <NextCSP
             documentProps={this.props}
-            directives={getDirectives(process.env.NODE_ENV === 'production')}
+            directives={getDirectives(process.env.NODE_ENV === 'production', nonce)}
           />
+          <CssInJsCsp nonce={nonce} />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
@@ -29,6 +38,7 @@ export default class AppDocument extends Document {
           <Main />
           <NextScript />
         </body>
+        <style />
       </Html>
     );
   }
@@ -49,6 +59,6 @@ AppDocument.getInitialProps = async (ctx) => {
   return {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
-    styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()]
+    styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement({ id: 'jss-server-side', nonce })]
   };
 };
